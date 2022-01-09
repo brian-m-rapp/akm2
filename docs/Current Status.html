@@ -1,0 +1,46 @@
+<a href="http://bluefish.openoffice.nl/">Made with Bluefish HTML editor.</a><P>AKM started out as an exercise to help me learn Java because the software I support in my day job is migrating from C/C++/Tcl/Fortran/Python/Perl/&lt;pick a language&gt; to Java and I really needed to learn it.  The target environment is Java/SWT/Eclipse RCP, which is why the GUI library currently used is SWT.  JFace isn't used since I won't be using it at work and didn't want to take the time to learn it.  I think a better choice for this project going forward is qt4 instead of SWT because it's faster, is more mature, and has some basic features that SWT lacks (such as filtering and sorting on tables, separation of the model from the view, etc.).  AKM started out as a simple command line utility that would query a specified Quake 3 server (since I mostly play Q3) and display the results on stdout.  I then added master server polling and queried all servers in the resultant list.  SWT was added to create the display, but the underlying query structure stayed in place, which is why the main display updates in a single batch instead of displaying servers as results are returned.  AKM's Quake 3 heritage is still obvious in much of the code.  AKM is patterned after Yahoo's now-defunct All-Seeing Eye, though it has some features that ASE did not, plus it will run on Linux and OS X in additional to Windows.</P>
+<P>To Do:</P>
+<OL>
+<LI><P>Migrate from SWT to qt4???</P>
+<LI><P>Add command line option to set debug level instead of hardcoding it (default will be 0).</P>
+<LI><P>Create Help-&gt;About	window</P>
+<OL>
+<LI><P>Show link to project (allknowingmind.sourceforge.net)</P>
+<LI><P>Credit Jacorre Design Studio (<U><A HREF="http://www.jacorre.com/">www.jacorre.com</A></U>) for flag icons</P>
+<LI><P>Credit MaxMind (<U><A HREF="http://www.maxmind.com/">www.maxmind.com</A></U>) for GeoIP software.</P>
+</OL>
+<LI><P>Dialog to allow to save/retrieve server passwords in XML file</P>
+<LI><P>Dialog to allow edit/save/retrieve user preferences</P>
+<LI><P>Create classes for server triggers to automatically connect to specific servers when given conditions are met.  All triggers must be automatically disabled (but not deleted) when one trigger is fired.  Should triggers be persistent?  Triggers are set on a server-by-server basis with connection criteria of any of the following:</P>
+<OL>
+<LI><P>specific map(s)</P>
+<LI><P>minimum # players on server</P>
+<LI><P>an open slot is available ((max_clients – private_slots) - player_count &gt; 0), or (max_clients – player_count &gt; 0) if password is known</P>
+<LI><P>other criteria?</P>
+</OL>
+<LI><P>Column ordering and selection (display/hide).</P>
+<LI><P>Extend sorting to Unknown servers.</P>
+<LI><P>Game configuration wizard</P>
+<LI><P>Application set up wizard</P>
+<LI><P>Application/game set up classes/windows</P>
+<LI><P>Toolbar configuration</P>
+<LI><P>Server stats (like xqf in File-&gt;stats)</P>
+<LI><P>Auto detect LAN servers</P>
+<LI><P>Auto login to games that require authentication (supported in games.xml, usergames.xml, GamesLoader and UserGamesLoader already).</P>
+<LI><P>Add/edit/delete servers not found in main listing</P>
+<LI><P>Add UT2K3/4</P>
+<LI><P>Add Battlefield protocols</P>
+<LI><P>Add Half-Life protocols (HL/HL2/Counterstrike/Fortress)</P>
+<LI><P>Add other Q3-based games (Jedi Knight, CoD, etc.)</P>
+<LI><P>Add Quake, Quake 2, and QuakeWorld, plus their mods</P>
+<LI><P>Filters for games/mods.  For example, allow creation of a filter for ETQW that will only display ranked servers.</P>
+<LI><P>Main server display grid should show game/mod-specific server info  instead of generic/Q3-inspired data shown currently.  Allow user to configure the server information that is displayed on a game/mod basis.</P>
+</OL>
+<P>Help Needed</P>
+<UL>
+<LI><P>Language translations for README.TXT and application text (Italian, German, French, Danish, Russian, Portuguese, whatever you know).  If you can translate from English to one of these or another language, spend an hour to help the project and you will be credited on the program Help-&gt;About window.</P>
+<LI><P>Graphics.  I am not a graphical artists, so everything used is borrowed from somewhere else. The logo and most of the game icons are probably copyrighted, though I don't know for sure.</P>
+<LI><P>Web site design.  I write programs, not HTML.  Looking for someplace to show off your mad web skillz?  I have work for you.</P>
+<LI><P>Coding.  Lots of features remain to be coded and some of my nasty hacks could stand rewriting. Do you have a favorite game that's not implemented?  Add it here.  Right now, only id-based protocols are written.  I would really like to have the Half Life and UT series implemented as well.</P>
+<LI><P>Testing.  Even if you do nothing more than use the program and submit the occasional bug report, I could use your help.</P>
+</UL>

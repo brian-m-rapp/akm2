@@ -1,0 +1,24 @@
+Game set up
+===========
+tree - game/mod
+check box - game installed
+check box - display game
+single text - game mod parm
+check box - multi-engine
+drop down - engine name (enabled when multi-engine checked)
+button - new engine
+button - remove engine
+single text, directory dialog - working directory
+single text, file dialog - start command
+
+drop down - mod name
+check box - mod installed
+check box - display mod
+
+button - default (far left)
+button - ok
+button - cancel
+
+Processing
+==========
+Verify engine details - delete blanks

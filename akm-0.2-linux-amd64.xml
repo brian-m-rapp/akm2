@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?><installation version="1.0">
+<info>
+<appname>The All-Knowing Mind</appname>
+<appversion>0.2</appversion>
+<appsubpath>akm</appsubpath>
+<authors>
+<author name="Brian Rapp" email="dilireus@speakeasy.net" />
+</authors>
+<url>http://sourceforge.net/projects/allknowingmind</url>
+<uninstaller write="yes" name="uninstaller.jar"/>
+<javaversion>1.5</javaversion>
+<requiresjdk>yes</requiresjdk>
+<webdir>http://</webdir>
+<writeinstallationinformation>yes</writeinstallationinformation>
+</info>
+<guiprefs width="640" height="480" resizable="yes">
+<modifier key="useFlags" value="yes"/>
+<modifier key="langDisplayType" value="default" />
+</guiprefs>
+<locale>
+<langpack iso3="eng"/>
+</locale>
+<resources>
+<res id="HTMLInfoPanel.info" src="/home/brapp/workspace/AKM/docs/README.html" parse="yes"/>
+<res id="HTMLLicencePanel.licence" src="/home/brapp/workspace/AKM/docs/gpl-2.0.html"/>
+<res id="installer.langsel.img" src="/home/brapp/workspace/AKM/images/oracle480x314.png"/>
+</resources>
+<panels>
+<panel classname="HelloPanel"/>
+<panel classname="HTMLInfoPanel"/>
+<panel classname="HTMLLicencePanel"/>
+<panel classname="PacksPanel"/>
+<panel classname="TargetPanel"/>
+<panel classname="InstallPanel"/>
+<panel classname="SimpleFinishPanel"/>
+</panels>
+<packs>
+<pack name="akm" required="yes" preselected="yes">
+<os family="Unix" name="linux" arch="amd64"/>
+ <description>Files required for AKM</description>
+<file src="/home/brapp/workspace/AKM/scripts/akm" targetdir="$INSTALL_PATH/" override="update">
+</file>
+<file src="/home/brapp/workspace/AKM/jars/commons-cli.jar" targetdir="$INSTALL_PATH/" override="update">
+</file>
+<file src="/home/brapp/workspace/AKM/jars/swt.jar" targetdir="$INSTALL_PATH/" override="update">
+</file>
+<file src="/home/brapp/workspace/AKM/jars/xmlenc.jar" targetdir="$INSTALL_PATH/" override="true">
+</file>
+<executable targetfile="/home/brapp/workspace/AKM/scripts/akm" stage="never" failure="warn" keep="true">
+</executable>
+</pack>
+ </packs>
+</installation>

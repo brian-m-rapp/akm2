@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Version 0.2
+	This DTD is the specification for the user-specific game information.
+ -->
+<!ELEMENT usergames			(game+)>
+<!ATTLIST usergames			version CDATA #REQUIRED>
+<!ELEMENT game				(displaygame,gameinstalled,authentication?,start*,folder*,defaultmodparms?,master+,mod*,friend*)>
+<!ATTLIST game				id ID #REQUIRED>
+<!ELEMENT displaygame		(#PCDATA)>
+<!ELEMENT gameinstalled		(#PCDATA)>
+
+<!ELEMENT authentication	(userid,password)>
+<!ELEMENT userid			(#PCDATA)>
+<!ELEMENT password			(#PCDATA)>
+
+<!ELEMENT start				(workingdir,startcommand,startparms?)>
+<!ATTLIST start				engine CDATA "default">
+<!ELEMENT workingdir		(#PCDATA)>
+<!ELEMENT startcommand		(#PCDATA)>
+<!ELEMENT startparms        (#PCDATA)>
+
+<!ELEMENT folder			(server*)>
+<!ATTLIST folder			name CDATA #REQUIRED>
+<!ELEMENT server			(address,port,hostname,rconpass?)>
+<!ELEMENT address			(#PCDATA)>
+<!ELEMENT port				(#PCDATA)>
+<!ELEMENT hostname			(#PCDATA)>
+<!ELEMENT rconpass			(#PCDATA)>
+
+<!ELEMENT defaultmodparms	(#PCDATA)>
+
+<!ELEMENT master 			(url,masterport?,protid*,queryname?,mastertype)>  <!-- gamename is used in the master server query as with Warsow -->
+<!ATTLIST master			enabled (yes|no) "yes">
+<!ELEMENT url				(#PCDATA)>
+<!ELEMENT masterport		(#PCDATA)>
+<!ELEMENT protid			(#PCDATA)>
+<!ELEMENT queryname			(#PCDATA)>		<!-- The Warsow and Nexuiz master servers require the gamename to be specified in the query string -->
+<!ELEMENT mastertype		(#PCDATA)>
+
+<!ELEMENT mod				(displaymod,modinstalled,moddir?,modcommand?,modparm?)>
+<!ATTLIST mod				id ID #REQUIRED>
+<!ELEMENT displaymod		(#PCDATA)>
+<!ELEMENT modinstalled		(#PCDATA)>
+<!ELEMENT moddir			(#PCDATA)>
+<!ELEMENT modcommand		(#PCDATA)>
+<!ELEMENT modparm			(#PCDATA)>
+
+<!ELEMENT friend			(#PCDATA)>

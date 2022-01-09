@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gamedefaults SYSTEM "gamedefaults.dtd" >
+<gamedefaults version="0.2">
+  <game gid="q3a">
+    <arch os="linux-amd64">
+      <start engine="default">
+        <defaultdir>/usr/local/games/quake3</defaultdir>
+        <defaultcommand>/usr/local/games/quake3/quake3</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="linux-i386">
+      <start engine="default">
+        <defaultdir>/usr/local/games/quake3</defaultdir>
+        <defaultcommand>/usr/local/games/quake3/quake3</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start engine="default">
+        <defaultdir>C:\Program Files\Quake III Arena</defaultdir>
+        <defaultcommand>C:\Program Files\Quake III Arena\quake3.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>monster.idsoftware.com</url>
+		<masterport>27950</masterport>
+		<protid>48</protid>
+		<protid>58</protid>
+		<protid>59</protid>
+		<protid>66</protid>
+		<protid>67</protid>
+		<protid>68</protid>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="baseq3"></mod>
+	<mod mid="osp"></mod>
+	<mod mid="cpma"></mod>
+	<mod mid="arena"></mod>
+	<mod mid="threewave"></mod>
+	<mod mid="beryllium"></mod>
+	<mod mid="defrag"></mod>
+	<mod mid="epic"></mod>
+	<mod mid="excessive"></mod>
+	<mod mid="freeze"></mod>
+	<mod mid="instaunlagged"></mod>
+	<mod mid="unlagged"></mod>
+	<mod mid="pkarena"></mod>
+	<mod mid="excessiveplus"></mod>
+	<mod mid="q3f2"></mod>
+	<mod mid="ufreeze"></mod>
+	<mod mid="westernq3"></mod>
+	<mod mid="battle"></mod>
+  </game>
+
+  <game gid="urt">
+    <arch os="linux-amd64">
+	  <start engine="ioq3">
+	    <defaultdir>/usr/local/games/UrbanTerror</defaultdir>
+	    <defaultcommand>/usr/local/games/UrbanTerror/ioUrbanTerror.x86_64</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	  <start engine="iourt">
+	    <defaultdir>/usr/local/games/UrbanTerror</defaultdir>
+	    <defaultcommand>/usr/local/games/UrbanTerror/ioUrbanTerror.x86_64</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	  <start engine="iourt[uaa]">
+	    <defaultdir>/usr/local/games/UrbanTerror</defaultdir>
+	    <defaultcommand>/usr/local/games/UrbanTerror/ioUrbanTerror.x86_64</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	  <start engine="q3">
+	    <defaultdir>/usr/local/games/quake3</defaultdir>
+	    <defaultcommand>/usr/local/games/quake3/quake3</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port} +set com_hunkmegs 256 +set fs_game ${modid}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start engine="ioq3">
+        <defaultdir>/usr/local/games/UrbanTerror</defaultdir>
+        <defaultcommand>/usr/local/games/UrbanTerror/ioUrbanTerror.i386</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+      <start engine="iourt">
+        <defaultdir>/usr/local/games/UrbanTerror</defaultdir>
+        <defaultcommand>/usr/local/games/UrbanTerror/ioUrbanTerror.i386</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+      <start engine="iourt[uaa]">
+        <defaultdir>/usr/local/games/UrbanTerror</defaultdir>
+        <defaultcommand>/usr/local/games/UrbanTerror/ioUrbanTerror.i386</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+      <start engine="q3">
+        <defaultdir>/usr/local/games/quake3</defaultdir>
+        <defaultcommand>/usr/local/games/quake3/quake3</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port} +set com_hunkmegs 256 +set fs_game ${modid}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start engine="ioq3">
+        <defaultdir>C:\Program Files\UrbanTerror</defaultdir>
+        <defaultcommand>C:\Program Files\UrbanTerror\ioUrbanTerror.exe +connect ${ipaddr}:${port}</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port} +set fs_game ${modid}</defaultparms>
+      </start>
+      <start engine="iourt">
+        <defaultdir>C:\Program Files\UrbanTerror</defaultdir>
+        <defaultcommand>C:\Program Files\UrbanTerror\ioUrbanTerror.exe +connect ${ipaddr}:${port}</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port} +set fs_game ${modid}</defaultparms>
+      </start>
+      <start engine="iourt[uaa]">
+        <defaultdir>C:\Program Files\UrbanTerror</defaultdir>
+        <defaultcommand>C:\Program Files\UrbanTerror\ioUrbanTerror.exe +connect ${ipaddr}:${port}</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port} +set fs_game ${modid}</defaultparms>
+      </start>
+      <start engine="q3">
+        <defaultdir>C:\Program Files\Quake III Arena</defaultdir>
+        <defaultcommand>C:\Program Files\Quake III Arena\quake3.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port} +set com_hunkmegs 256 +set fs_game ${modid}</defaultparms>
+      </start>
+    </arch>
+	<master>
+		<url>master.urbanterror.net</url>
+		<masterport>27950</masterport>
+		<protid>68</protid>
+		<mastertype>q3m</mastertype>
+	</master>		
+	<master>
+		<url>master2.urbanterror.net</url>
+		<masterport>27950</masterport>
+		<protid>68</protid>
+		<mastertype>q3m</mastertype>
+	</master>		
+	<mod mid="q3ut2"></mod>
+	<mod mid="q3ut3"></mod>
+	<mod mid="q3ut4"></mod>
+	<mod mid="q3ut42"></mod>
+  </game>
+
+  <game gid="wet">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/enemy-territory</defaultdir>
+        <defaultcommand>/usr/local/games/enemy-territory/et</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/enemy-territory</defaultdir>
+        <defaultcommand>/usr/local/games/enemy-territory/enemy-territory/et</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\Program Files\Wolfenstein - Enemy Territory</defaultdir>
+        <defaultcommand>C:\Program Files\Wolfenstein - Enemy Territory\ET.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>etmaster.idsoftware.com</url>
+		<masterport>27950</masterport>
+		<protid>84</protid>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="etmain"></mod>
+	<mod mid="etpro"></mod>
+	<mod mid="etpub"></mod>
+  </game>
+
+  <game gid="wop">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/WoP</defaultdir>
+        <defaultcommand>/usr/local/games/WoP/WoP</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/WoP</defaultdir>
+        <defaultcommand>/usr/local/games/WoP/WoP</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\World of Padman</defaultdir>
+        <defaultcommand>C:\World of Padman\wop.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>wopmaster.kickchat.com</url>
+		<masterport>27955</masterport>
+		<protid>68</protid>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="wop"></mod>
+  </game>
+
+  <game gid="etqw">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/etqw</defaultdir>
+        <defaultcommand>/usr/local/games/etqw/etqw</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/etqw</defaultdir>
+        <defaultcommand>/usr/local/games/etqw/etqw</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\Program Files\id Software\Enemy Territory - QUAKE Wars</defaultdir>
+        <defaultcommand>C:\Program Files\id Software\Enemy Territory - QUAKE Wars\etqw.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>http://etqw-ipgetter.demonware.net/ipgetter/</url>
+		<mastertype>http</mastertype>
+	</master>
+	<mod mid="base"></mod>
+	<mod mid="etqwpro"></mod>
+	<mod mid="dusk"></mod>
+	<mod mid="twars"></mod>
+  </game>
+
+  <game gid="wsw">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/warsow</defaultdir>
+        <defaultcommand>/usr/local/games/warsow/warsow</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/warsow</defaultdir>
+        <defaultcommand>/usr/local/games/warsow/warsow</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\Program Files\Warsow</defaultdir>
+        <defaultcommand>C:\Program Files\Warsow\warsow_x86.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>dpmaster.deathmask.net</url>
+		<masterport>27950</masterport>
+		<protid>9</protid>
+		<protid>10</protid>
+		<queryname>Warsow</queryname>
+		<mastertype>q3m</mastertype>
+	</master>
+	<master>
+		<url>ghdigital.com</url>
+		<masterport>27950</masterport>
+		<protid>9</protid>
+		<protid>10</protid>
+		<queryname>Warsow</queryname>
+		<mastertype>q3m</mastertype>
+	</master>
+	<master>
+		<url>excalibur.nvg.ntnu.no</url>
+		<masterport>27950</masterport>
+		<queryname>Warsow</queryname>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="warsow"></mod>
+  </game>
+
+  <game gid="rtcw">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/wolfenstein</defaultdir>
+        <defaultcommand>/usr/local/games/warsow/wolf</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/wolfenstein</defaultdir>
+        <defaultcommand>/usr/local/games/wolfenstein/wolf</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\Program Files\Return to Castle Wolfenstein</defaultdir>
+        <defaultcommand>C:\Program Files\Return to Castle Wolfenstein\WolfMP.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>monster.idsoftware.com</url>
+		<masterport>27950</masterport>
+		<protid>57</protid>
+		<protid>60</protid>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="main" />
+	<mod mid="s4ndmod" />
+	<mod mid="osp"  />
+	<mod mid="sluxx" />
+	<mod mid="shrub" />
+	<mod mid="banimod" />
+	<mod mid="wildwest" />
+	<mod mid="omni-bot:rtcwmain" />
+	<mod mid="do4!-mod" />
+  </game>
+
+  <game gid="oarena">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/openarena</defaultdir>
+        <defaultcommand>/usr/local/games/openarena/openarena.x86_64</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/openarena</defaultdir>
+        <defaultcommand>/usr/local/games/openarena/openarena.i386</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\OpenArena</defaultdir>
+        <defaultcommand>C:\OpenArena\openarena.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>dpmaster.deathmask.net</url>
+		<masterport>27950</masterport>
+		<protid>68</protid>
+		<protid>70</protid>
+		<protid>71</protid>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="baseoa"></mod>
+	<mod mid="noghost"></mod>
+	<mod mid="baseq3"></mod>
+	<mod mid="cpma"></mod>
+	<mod mid="defrag"></mod>
+  </game>
+
+  <game gid="nexuiz">
+    <arch os="linux-amd64">
+	  <start>
+        <defaultdir>/usr/local/games/Nexuiz</defaultdir>
+        <defaultcommand>/usr/local/games/Nexuiz/nexuiz-linux-sdl.sh</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+	  </start>
+	</arch>
+    <arch os="linux-i386">
+      <start>
+        <defaultdir>/usr/local/games/Nexuiz</defaultdir>
+        <defaultcommand>/usr/local/games/Nexuiz/nexuiz-linux-sdl.sh</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <arch os="win-x86">
+      <start>
+        <defaultdir>C:\Nexuiz</defaultdir>
+        <defaultcommand>C:\Nexuiz\nexuiz-sdl.exe</defaultcommand>
+        <defaultparms>+connect ${ipaddr}:${port}</defaultparms>
+      </start>
+    </arch>
+    <defaultmodparms>+set fs_game ${modid}</defaultmodparms>
+	<master>
+		<url>dpmaster.deathmask.net</url>
+		<masterport>27950</masterport>
+		<protid>3</protid>
+		<queryname>Nexuiz</queryname>
+		<mastertype>q3m</mastertype>
+	</master>
+	<mod mid="nexuiz"></mod>
+	<mod mid="data"></mod>
+	<mod mid="tourney"></mod>
+  </game>
+</gamedefaults>

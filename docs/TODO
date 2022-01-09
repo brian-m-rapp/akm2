@@ -1,0 +1,30 @@
+ To Do List:
+	+	Add function to find LAN servers via broadcast.
+    +   Modify main structure to use a StackLayout for the server display.  Each game will have its own 
+    	server table.  When mods or game types are selected, filters will be applied to the server table
+        to only show the appropriate servers.
+    +   Allow the same master URL to be included more than once for each game.  This can be useful if the
+        user wants to have different protocol configurations available.  For instance, if the user wants
+        to only see 1.32 Q3 servers, he can enable a master server that is set up to only query for 
+        protocol 68, and disable the standard master that has queries for all protocols.
+	+	Would be cool to display a window that lists the changes in the new version 
+	+	Separate maps from the application
+	+	Create installation package with IzPack and PackJacket.
+	+	Implement join triggers
+	+	Allow unknown servers to be sorted.
+	+	Don't allow connection to an unknown server, or at least warn the user and give
+		him the opportunity to do it anyway.
+	+	Check for the number of open player slots during join.  Give warning dialogue if no
+		open slots.
+	+	Create friends lists by game.  Allow to add friends by right clicking on players in servers.
+	+	Create a function to find friends by searching through all servers in the current game for 
+		matches (case insensitive) in the friends list for that game.  Create a "Friends" folder 
+		(non-persistent) and copy servers that have friends to them.  Friends folder should be updated 
+		every time the servers are refreshed.
+	+	Implement player search function that searches for a particular name (requires user input) in 
+		any servers in the currently selected game.
+	+   Help menu option to check for updates.
+	+   New User Preferences:
+	        +   Allow server auto update of currently selected game (input frequency in minutes)
+			+	Create option to discard (or not list) unknown servers
+

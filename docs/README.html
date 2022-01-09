@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>README</title>
+<meta name="generator" content="Bluefish 1.0.7">
+<meta name="author" content="Brian Rapp">
+<meta name="date" content="2009-06-29T23:16:02-0400">
+<meta name="copyright" content="Brian Rapp">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<P><U><B>The All-Knowing Mind</B></U></P>
+
+<P>AKM is a multi-language FPS game server browser. AKM is written in Java, making it operating system agnostic. 
+It should run on any platform that has a JVM available and is supported by the SWT GUI library. There are multiple
+install packages because the SWT library is specific to the OS and JVM.</p>
+<p><u><b>Licensing</b></u></p>
+<p>
+AKM is licensed under the GNU General Public License (GPL) version 2. It is open source and is free in both 
+senses of the word. It is free as in beer (gratis) and free as in speech (libre). The source code is available
+for download from the project home page: 
+ 
+<a href="http://sourceforge.net/projects/allknowingmind/">
+http://sourceforge.net/projects/allknowingmind/</a>. You can modify the source code any way you like, but you
+are required to offer your changes back to the project.
+</p>
+<p><u><b>What's New in version 0.2?</b></u></p>
+<p>
+This version includes most of the functionality that was missing from the previous version. It also has an
+installer to make installation a breeze. The GeoIP database has been updated. New features include the following:</p>
+<ul>
+<li>Game autodetect</li>
+<li>Game configuration dialog</li>
+<li>Game engine configuration</li>
+<li>Master server configuration</li>
+<li>Per-game customizable folders</li>
+<li>Add arbitrary servers by IP address</li>
+<li>Drag and drop servers into folders</li>
+<li>User preferences dialog</li>
+</ul>
+<P><U><b>Supported Games</b></U></P>
+<P>AKM currently supports:</P>
+<UL>
+<LI>Urban Terror</LI>
+<LI>Quake 3</LI>
+<LI>Wolfenstein: Enemy Territory</LI>
+<LI>Enemy Territory: Quake Wars</LI>
+<LI>Return to Castle Wolfenstein</LI>
+<LI>Nexuiz</LI>
+<LI>OpenArena</LI>
+<LI>World of Padman</LI>
+<LI>Warsow</LI>
+</UL>
+<P>
+The Half Life games and their derivatives, the Battlefield series, and the CoD games will eventually be
+supported. Any games that use id's Quake 3 protocols should be trivial to add without any code changes.
+If you want support for additional games, please submit a feature request via the project website.</P>
+<p>
+<u><b>Installation</b></u></p>
+<p>
+A JRE version 1.5 or later must be installed. In Windows, you should be able to just double click on the
+jar file that you downloaded. You may get a warning popup indicating you need a Java development environment,
+but you can ignore this. It will still install.</p>
+<p>To start installation in Linux, open a terminal window, cd to the directory containing the installation jar 
+file, and type:</p>
+<code>java -jar akm-install-&lt;version&gt;</code>.jar
+<p>Installation is fairly self-explanatory. The biggest decision you need to make is where to install AKM. 
+You can also choose to install shortcuts on your desktop and/or in the start menu. In the menu, it will be 
+installed in "Games" by default. It is recommended that you install the shortcuts and use them to launch AKM
+rather than creating your own.</p>
+<p><u><b>*************IMPORTANT LINUX NOTE***************</b></u></p>
+<p>
+After you have completed the installation, you <i>must</i> give the akm.jar file execute permission. For some
+reason, the installer doesn't do it, though it's supposed to. To set the permissions, Open a terminal window,
+cd to the AKM installation directory (~/akm by default), and type:</p>
+<code>chmod +x akm.jar</code>
+<p>You will then be able to launch AKM with the shortcuts.</p>
+<p>
+<u><b>Uninstallation</b></u></p>
+An uninstall jar file is created by default in the Uninstall subdirectory of your installation directory. To
+completely uninstall AKM, open a terminal window, cd to the Uninstall directory, and type the command:</p>
+<code>java -jar uninstall.jar</code>
+<P>
+<b><u>Game Configuration</u></b></P>
+<P>
+The first time you run AKM, it will attempt to find the supported games in their default locations. On
+Windows platforms, those will be whatever the default installation directory is for the particular game. 
+On Linux platforms, AKM will look in /usr/local. Any games found will automatically be enabled, as will 
+all of their mods. If no games are found in the default locations, then the game configuration dialog 
+will appear allowing you to choose which games are installed and where they are located. For a game to 
+appear in the tree on the left side of the display, 'Show Game' must be checked. You can display games 
+even if they are not installed. If you want to be able to launch a game from AKM, then it must be installed 
+at the location indicated, and 'Game Installed' must be checked. You can also decide which mods you want 
+to display.</p>
+<p>
+You should not modify any of the game engine or master server settings unless you have a very specific 
+reason for doing so. However, if you play Quake 3, you may want to restrict the servers to protocol 68. 
+All protocol versions are displayed by default, but you will need a version switcher program, such as 
+<a href="http://www.quaketweaks.com/version.html">this one</a> (for Windows only) to be able to play 
+all versions. 
+</p>
+<p><u><b>Recovery</b></u></p>
+If you make any changes that make it impossible to scan for servers or launch a particular game, you can
+delete usergames.xml and AKM will rebuild it to the default values.  usergames.xml is located in the
+data subdirectory under the installation directory. Do not modify or delete any other files in that 
+directory or you may render AKM unusable.
+<p>
+<b><u>Notes on Urban Terror 4</u></b></p>
+<p>
+Urban Terror 4 is configured as a standalone game. This default configuration will launch the ioUrbanTerror 
+client if the server is an ioq3 server and it will launch the quake3 client if the server is a Q3 server. 
+You can change this behavior if you only have one of the two clients installed by removing the game engine(s) 
+entries that you don't have installed using the game configuration dialog. For instance, if you don't have 
+Quake 3 installed, remove all entries except for the ioq3 entry. If you don't have ioq3 installed, remove 
+all of the entries that use it and only leave the q3 entry.</p>
+<P>
+<U>System Requirements</U></P>
+<P>
+Windows XP or Linux (Mac OS X to be supported in a future release). It very well may work on other versions of 
+Windows, but it hasn't been tested.</P>
+<P>Java 1.5 Standard Edition is required at a minimum.</P>
+<P><U><b>Directory Structure</b></U></P>
+<P><B>Linux:</B></P>
+<BLOCKQUOTE>
+<P>/ - Java jar files</P>
+<BLOCKQUOTE>
+<P>data/ - GeoIP database and the XML configuration files</P>
+<P>icons/ - all icons</P>
+<BLOCKQUOTE>
+<P>flags/</P>
+<P>game/</P>
+<P>misc/</P>
+<P>toolbar/</P>
+</BLOCKQUOTE>
+<P>images/ - all non-icon images (maps, application, etc.)</P>
+<BLOCKQUOTE>
+<P>maps/</P>
+<BLOCKQUOTE>
+<P>&lt;game1&gt;</P>
+<P>&lt;game2&gt;</P>
+<P>&lt;...&gt;</P>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+<P>resources/ - language and resource files
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+<P>The log file is in ~/.akm.</P>
+<P><B>Windows:</B></P>
+<P>The default installation directory is C:\Program&nbsp;Files\The&nbsp;All-Knowing&nbsp;Mind\. The base directory has the 
+following structure:</P>
+<BLOCKQUOTE>
+<P>\ - Java jar files</P>
+<BLOCKQUOTE>
+<P>data\ - GeoIP database (GeoIP.dat)</P>
+<P>icons\ - all icons</P>
+<BLOCKQUOTE>
+<P>flags\</P>
+<P>game\</P>
+<P>misc\</P>
+<P>toolbar\</P>
+</BLOCKQUOTE>
+<P>images\ - all non-icon images (maps, application, etc.)</P>
+<BLOCKQUOTE>
+<P>maps\</P>
+<BLOCKQUOTE>
+<P>&lt;game1&gt;</P>
+<P>&lt;game2&gt;</P>
+<P>&lt;...&gt;</P>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+<P>resources\ - configuration and language files</P>
+</BLOCKQUOTE>
+</BLOCKQUOTE>
+<P>The log file is in C:\Documents&nbsp;and&nbsp;Settings\&lt;username&gt;\Application&nbsp;Data\Dilireum\The&nbsp;All-Knowing&nbsp;Mind.</P>
+<p>If you want to create your own Desktop shortcut from scratch, the easiest way is to create a new shortcut to 
+javaw.exe. Then select the the shortcut properties and append "-jar org.dilireum.akm.jar" to the Target, and 
+change the "Start in:" field to "C:\Program&nbsp;Files\The&nbsp;All-Knowing&nbsp;Mind".
+Alternatively, you can simply create a shortcut to "C:\Program&nbsp;Files\The&nbsp;All-Knowing&nbsp;Mind\akm.bat", 
+but you will have to put up with an annoying extra DOS window if you do.</p>
+<P><B>OS X:</B></P>
+<P>I have no idea. My knowledge of the Mac wouldn't fill the back of a business card. If you want OS X supported, 
+let's talk.</P>
+<p>
+<u><b>Map Images</b></u></p>
+<p>
+You can add additional map images as you like. All map files must be jpeg format. They will automatically be 
+compressed to 200x200. The file name must match the map name as reported by servers. You should make use all
+lower case since AKM will translate all map names reported by servers to lowercase before attempting to find
+a matching file name.</p>
+<p>
+<u><b>Reporting Bugs</b></u></p>
+<p>
+AKM is now fully functional, but it is still in the pre-alpha development phase and there <em>will</em> be bugs. 
+If you find any, please report them here:</P>
+<BLOCKQUOTE><a href="http://sourceforge.net/tracker2/?func=add&amp;group_id=243818&amp;atid=1123681">http://sourceforge.net/tracker2/?func=add&amp;group_id=243818&amp;atid=1123681</a>.
+</BLOCKQUOTE>
+<P>Provide as much detailed information as possible to help us track it down. There is a log file for AKM in ~/.akm/log on
+Linux platforms and in C:\Documents and Settings\&lt;username&gt;\Application Data\Dilireum\The All-Knowing Mind\log on Windows 
+machines. Any stack trace from the log file plus a description of what you were doing when it crashed would be helpful.</P>
+<P>If you would like to contribute, I'm looking for talent, whether it be doing language translations, testing, 
+creating map images, web site design, graphics, researching game protocols, or hard core hacking.</P>
+</body>
+</html>

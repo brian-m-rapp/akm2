@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Version 0.2
+	This DTD is the specification for the games.xml file, which contains non-OS
+	specific information about each game.
+ -->
+<!ELEMENT games			(game+)>
+<!ATTLIST games			version CDATA #REQUIRED>
+<!ELEMENT game			(gamename,gameicon,servertype,defaultport,attribute*,cheatprotection?,mod*,ignoreothers?,ignore*)>
+<!ATTLIST game			id ID #REQUIRED>
+<!ELEMENT gamename		(#PCDATA)>
+<!ELEMENT gameicon		(#PCDATA)>
+<!ELEMENT servertype	(#PCDATA)>		<!-- q3s = q3 server with getstatus query, q3i = q3 server with getinfo query -->
+<!ATTLIST servertype	authenticate CDATA #IMPLIED>
+<!ELEMENT defaultport	(#PCDATA)>
+
+<!-- Attributes are used to specify cvars that differ from the base game type standard.
+	Server Attribute vars can have the following values:
+		
+	engineversion	(var for the game engine version)
+	gametype		(var for game type - e.g.: ffa, ctf, tdm)
+	gamename		(var for game mod)
+	gameversion		(var for version of a mod engine as with Q3 OSP)
+	modversion		(var for version of a mod for games like RA3, which use it as the discriminator)
+	protocol		(var for network protocol ID)
+	mapname			(var for the current map name)
+	cheatprotection	(var for status of the cheat protection software such as punkbuster)
+	needpassword	(var for whether or not a password is required to connect)
+	servername		(var for the server name)
+	timelimit		(var for the game time limit)
+	maxclients		(var for the maximum number of clients allowed on the server
+
+	Any values not specified will use the default cvar for the game.  
+	(e.g. - for a quake3 derivative, sv_hostname will be used for the server name unless it is overridden  with a
+	"servername" attribute).  The configuration for Nexuiz has some actual examples.
+
+ -->
+<!ELEMENT attribute		(#PCDATA)>
+<!ATTLIST attribute		var CDATA #REQUIRED>
+<!ELEMENT cheatprotection (#PCDATA)>
+
+<!ELEMENT mod			(modname,modicon?,moddiscrim?,team1name?,team2name?,customnames?,gametype*)>
+<!ATTLIST mod			id CDATA #REQUIRED>
+<!ELEMENT ignoreothers	EMPTY>
+<!ELEMENT ignore		(#PCDATA)>		<!-- uses the game discriminator to determine which mods/engines/etc to ignore -->
+<!ATTLIST ignore		attrib	(mod|engine) "mod">
+
+<!ELEMENT modname		(#PCDATA)>
+<!ELEMENT modicon		(#PCDATA)>		<!-- if not specified, the game icon will be used -->
+<!ELEMENT moddiscrim	(#PCDATA)>		<!-- gametype normally, or gameversion for ra3 -->
+<!ELEMENT team1name		(#PCDATA)>
+<!ELEMENT team2name		(#PCDATA)>
+<!ELEMENT customnames	(#PCDATA)>		<!-- true or false -->
+<!ELEMENT gametype		(#PCDATA)>
+<!ATTLIST gametype		id CDATA #REQUIRED>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Version 0.2
+	
+	This file defines the specification for the default game set up XML files.
+	There is a different default file for each OS, since it contains default
+	directory and start commands for each game. 
+-->
+<!ELEMENT gamedefaults			(game+)>
+<!ATTLIST gamedefaults			version CDATA #REQUIRED>
+<!ELEMENT game					(arch+,defaultmodparms?,master+,mod+)>
+<!ATTLIST game					gid CDATA #REQUIRED>
+
+<!ELEMENT arch                  (start+)>
+<!ATTLIST arch                  os CDATA #REQUIRED>
+<!ELEMENT start					(defaultdir,defaultcommand,defaultparms)>
+<!ATTLIST start					engine CDATA "default">
+<!ELEMENT defaultdir			(#PCDATA)>
+<!ELEMENT defaultcommand		(#PCDATA)>
+<!ELEMENT defaultparms          (#PCDATA)>
+<!ELEMENT defaultmodparms		(#PCDATA)>
+
+<!ELEMENT master 				(url,masterport?,protid*,queryname?,mastertype)>  <!-- gamename is used in the master server query as with Warsow -->
+<!ATTLIST master				enabled (yes|no) "yes">
+<!ELEMENT url					(#PCDATA)>
+<!ELEMENT masterport			(#PCDATA)>
+<!ELEMENT protid				(#PCDATA)>
+<!ELEMENT queryname				(#PCDATA)>		<!-- The Warsow and Nexuiz master servers require the gamename to be specified in the query string -->
+<!ELEMENT mastertype			(#PCDATA)>
+
+<!ELEMENT mod					(modparms?)>
+<!ATTLIST mod					mid CDATA #REQUIRED>
+<!ELEMENT modparms				(#PCDATA)>

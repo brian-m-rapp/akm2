@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE games SYSTEM "games.dtd" >
+
+<games version="0.2">
+	<game id="q3a">
+		<gamename>Quake III Arena</gamename>
+		<gameicon>quake3</gameicon>			<!--  For Linux/OSX, this will be a PNG file; for Windows, it will be a gif -->
+		<servertype>q3s</servertype>
+		<cheatprotection>punkbuster</cheatprotection>
+		<mod id="baseq3">
+			<modname>BaseQ3</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="osp">
+			<modname>OSP</modname>
+			<modicon>osp</modicon>
+			<moddiscrim>gametype</moddiscrim> 
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+			<gametype id="5">Clan Arena</gametype>
+			<gametype id="6">Freeze Tag</gametype>
+		</mod>
+		<mod id="cpma">
+			<modname>CPMA</modname>
+			<modicon>cpma</modicon>
+			<moddiscrim>gametype</moddiscrim> 
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+			<gametype id="5">Clan Arena</gametype>
+			<gametype id="6">Freeze Tag</gametype>
+			<gametype id="7">Capture Strike</gametype>
+		</mod>
+		<mod id="arena">
+			<modname>Rocket Arena</modname>
+			<modicon>ra3</modicon>
+			<moddiscrim>gameversion</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="1.8b">1.8b</gametype>
+			<gametype id="1.76a">1.76a</gametype>
+			<gametype id="1.76">1.76</gametype>
+		</mod>
+		<mod id="threewave">
+			<modname>Threewave</modname>
+			<modicon>threewave</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="0">Threewave CTF</gametype>
+			<gametype id="1">Classic CTF</gametype>
+			<gametype id="2">Capture Strike</gametype>
+			<gametype id="3">Threewave FFA</gametype>
+			<gametype id="4">Threewave TDM</gametype>
+		</mod>
+		<mod id="beryllium">
+			<modname>Beryllium</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="defrag">
+			<modname>DeFrag</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="0">Auto Config</gametype>
+			<gametype id="1">Single Player DeFrag</gametype>
+			<gametype id="2">Single Player Tricks</gametype>
+			<gametype id="3">Single Player Fastcaps</gametype>
+			<gametype id="4">Multiplayer Defrag</gametype>
+			<gametype id="5">Multiplayer Tricks</gametype>
+			<gametype id="6">Multiplayer Fastcaps</gametype>
+		</mod>
+		<mod id="epic">
+			<modname>Epic</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="excessive">
+			<modname>Excessive Plus</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="freeze">
+			<modname>Freeze Tag</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="instaunlagged">
+			<modname>Insta-Unlagged</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="unlagged">
+			<modname>Unlagged</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="pkarena">
+			<modname>Pain Keep Arena</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="excessiveplus">
+			<modname>Excessive Plus</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="q3f2">
+			<modname>Fortress 2</modname>
+			<modicon>q3f</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="1">Tournament</gametype>
+			<gametype id="2">FFA</gametype>
+			<gametype id="3">TDN</gametype>
+			<gametype id="4">CTF</gametype>
+			<gametype id="5">Fortress</gametype>
+		</mod>
+		<mod id="ufreeze">
+			<modname>Ultra Freeze Tag</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="westernq3">
+			<modname>Western Quake</modname>
+			<modicon>wq3</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<mod id="battle">
+			<modname>X-Battle</modname>
+			<modicon>battle</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">CTF</gametype>
+		</mod>
+		<ignore attrib="mod">q3ut2</ignore>
+		<ignore attrib="mod">q3ut3</ignore>
+		<ignore attrib="mod">q3ut4</ignore>
+		<ignore attrib="mod">q3ut42</ignore>
+	</game>
+	<game id="urt">
+		<gamename>Urban Terror</gamename>
+		<gameicon>q3ut</gameicon>
+		<servertype>q3s</servertype>
+		<mod id="q3ut2">
+			<modname>Urban Terror 2</modname>
+			<modicon>q3ut</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>true</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">TS</gametype>
+			<gametype id="5">FTL</gametype>
+			<gametype id="6">CAH</gametype>
+			<gametype id="7">CTF</gametype>
+			<gametype id="8">Bomb</gametype>
+		</mod>
+		<mod id="q3ut3">
+			<modname>Urban Terror 3</modname>
+			<modicon>q3ut</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>true</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">TS</gametype>
+			<gametype id="5">FTL</gametype>
+			<gametype id="6">CAH</gametype>
+			<gametype id="7">CTF</gametype>
+			<gametype id="8">Bomb</gametype>
+		</mod>
+		<mod id="q3ut4">
+			<modname>Urban Terror 4</modname>
+			<modicon>q3ut</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>true</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">TS</gametype>
+			<gametype id="5">FTL</gametype>
+			<gametype id="6">CAH</gametype>
+			<gametype id="7">CTF</gametype>
+			<gametype id="8">Bomb</gametype>
+		</mod>
+		<mod id="q3ut42">
+			<modname>Urban Terror 4.2</modname>
+			<modicon>q3ut</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>true</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="3">TDM</gametype>
+			<gametype id="4">TS</gametype>
+			<gametype id="5">FTL</gametype>
+			<gametype id="6">CAH</gametype>
+			<gametype id="7">CTF</gametype>
+			<gametype id="8">Bomb</gametype>
+		</mod>
+		<ignoreothers />
+	</game>
+	<game id="wsw">
+		<gamename>Warsow</gamename>
+		<gameicon>warsow</gameicon>
+		<servertype>q3i</servertype>
+		<mod id="warsow">
+			<modname>Warsow</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="dm">FFA</gametype>
+			<gametype id="duel">Duel</gametype>
+			<gametype id="tdm">TDM</gametype>
+			<gametype id="ctf">CTF</gametype>
+			<gametype id="race">Race</gametype>
+			<gametype id="insta">Instagib</gametype>
+			<gametype id="ca">Clan Arena</gametype>
+			<gametype id="da">Duel &amp; Quad</gametype>
+		</mod>
+	</game>
+	<game id="rtcw">
+		<gamename>Return to Castle Wolfenstein</gamename>
+		<gameicon>rtcw</gameicon>
+		<servertype>q3s</servertype>
+		<cheatprotection>punkbuster</cheatprotection>
+		<mod id="main">
+			<modname>RTCW</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="s4ndmod">
+			<modname>S4NDMod</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="osp">
+			<modname>OSP</modname>
+			<modicon>osp</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="sluxx">
+			<modname>Sluxx</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="shrub">
+			<modname>Shrub</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="banimod">
+			<modname>BaniMod</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="wildwest">
+			<modname>Wild West</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="omni-bot:rtcwmain">
+			<modname>Omni-Bot</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+		<mod id="do4!-mod">
+			<modname>Do4!-Mod</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="5">Multi-Player</gametype>
+			<gametype id="6">Stop Watch</gametype>
+			<gametype id="7">Check Point</gametype>
+		</mod>
+	</game>
+	<game id="wet">
+		<gamename>Wolfenstein: Enemy Territory</gamename>
+		<gameicon>wet</gameicon>
+		<servertype>q3s</servertype>
+		<mod id="etmain">
+			<modname>Main</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="2">Objective</gametype>
+			<gametype id="3">Stop Watch</gametype>
+			<gametype id="4">Campaign</gametype>
+			<gametype id="5">Last Man Standing</gametype>
+		</mod>
+		<mod id="etpro">
+			<modname>ET Pro</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="2">Objective</gametype>
+			<gametype id="3">Stop Watch</gametype>
+			<gametype id="4">Campaign</gametype>
+			<gametype id="5">Last Man Standing</gametype>
+		</mod>
+		<mod id="etpub">
+			<modname>ET Pub</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="2">Objective</gametype>
+			<gametype id="3">Stop Watch</gametype>
+			<gametype id="4">Campaign</gametype>
+			<gametype id="5">Last Man Standing</gametype>
+		</mod>
+		<mod id="noquarter">
+			<modname>No Quarter</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="2">Objective</gametype>
+			<gametype id="3">Stop Watch</gametype>
+			<gametype id="4">Campaign</gametype>
+			<gametype id="5">Last Man Standing</gametype>
+		</mod>
+		<mod id="jaymod">
+			<modname>Jay Mod</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="2">Objective</gametype>
+			<gametype id="3">Stop Watch</gametype>
+			<gametype id="4">Campaign</gametype>
+			<gametype id="5">Last Man Standing</gametype>
+		</mod>
+		<mod id="tcetest">
+			<modname>True Combat: Elite</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Allies</team1name>
+			<team2name>Axis</team2name>
+			<customnames>false</customnames>
+			<gametype id="2">Objective</gametype>
+			<gametype id="3">Stop Watch</gametype>
+			<gametype id="4">Campaign</gametype>
+			<gametype id="5">Last Man Standing</gametype>
+		</mod>
+	</game>
+	<game id="wop">
+		<gamename>World of Padman</gamename>
+		<gameicon>wop</gameicon>
+		<servertype>q3s</servertype>
+		<mod id="wop">
+			<modname>WOP</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="0">FFA</gametype>
+			<gametype id="1">Duel</gametype>
+			<gametype id="3">Spray Your Color - FFA</gametype>
+			<gametype id="4">Last Pad Standing</gametype>
+			<gametype id="5">Team DM</gametype>
+			<gametype id="6">CTL</gametype>
+			<gametype id="7">Spray Your Color - Team</gametype>
+			<gametype id="8">Big Balloon</gametype>
+		</mod>
+	</game>
+	<game id="etqw">
+		<gamename>Enemy Territory: Quake Wars</gamename>
+		<gameicon>etqw</gameicon>
+		<servertype authenticate="true">etqw</servertype>
+		<cheatprotection>punkbuster</cheatprotection>
+		<mod id="base">
+			<modname>Base ETQW</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="sdgamerulesobjective">Objective</gametype>
+			<gametype id="sdgamerulesstopwatch">Stop Watch</gametype>
+			<gametype id="sdgamerulescampaign">Campaign</gametype>
+		</mod>
+		<mod id="etqwpro">
+			<modname>ETQW Pro</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="sdgamerulesobjective">Objective</gametype>
+			<gametype id="sdgamerulesstopwatch">Stop Watch</gametype>
+			<gametype id="sdgamerulescampaign">Campaign</gametype>
+			<gametype id="sdgamerulescompetition">Competition</gametype>
+		</mod>
+		<mod id="dusk">
+			<modname>Dusk</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="sdgamerulesobjective">Objective</gametype>
+			<gametype id="sdgamerulesstopwatch">Stop Watch</gametype>
+			<gametype id="sdgamerulescampaign">Campaign</gametype>
+		</mod>
+		<mod id="twars">
+			<modname>T-Wars</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="sdgamerulesobjective">Objective</gametype>
+			<gametype id="sdgamerulesstopwatch">Stop Watch</gametype>
+			<gametype id="sdgamerulescampaign">Campaign</gametype>
+			<gametype id="twgamerulesctf">CTF</gametype>
+		</mod>
+	</game>
+	<game id="oarena">
+		<gamename>OpenArena</gamename>
+		<gameicon>openarena</gameicon>
+		<servertype>q3s</servertype>
+		<mod id="baseoa">
+			<modname>Base OpenArena</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">Free For All</gametype>
+			<gametype id="1">Tournament</gametype>
+			<gametype id="3">Team Death Match</gametype>
+			<gametype id="4">Capture The Flag</gametype>
+			<gametype id="5">Clan Arena</gametype>
+			<gametype id="8">Elimination</gametype>
+			<gametype id="9">CTF Elimination</gametype>
+			<gametype id="10">Last Man Standing</gametype>
+			<gametype id="11">Double Domination</gametype>
+			<gametype id="12">Domination</gametype>
+		</mod>
+		<mod id="noghost">
+			<modname>NoGhost</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">Free For All</gametype>
+			<gametype id="1">Tournament</gametype>
+			<gametype id="3">Team Death Match</gametype>
+			<gametype id="4">Capture The Flag</gametype>
+			<gametype id="5">Clan Arena</gametype>
+			<gametype id="8">Elimination</gametype>
+			<gametype id="9">CTF Elimination</gametype>
+			<gametype id="10">Last Man Standing</gametype>
+			<gametype id="11">Double Domination</gametype>
+			<gametype id="12">Domination</gametype>
+		</mod>
+		<mod id="baseq3">
+			<modname>BaseQ3</modname>
+			<modicon>quake3</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">Free For All</gametype>
+			<gametype id="1">Tournament</gametype>
+			<gametype id="3">Team Death Match</gametype>
+			<gametype id="4">Capture The Flag</gametype>
+			<gametype id="5">Clan Arena</gametype>
+			<gametype id="8">Elimination</gametype>
+			<gametype id="9">CTF Elimination</gametype>
+			<gametype id="10">Last Man Standing</gametype>
+			<gametype id="11">Double Domination</gametype>
+			<gametype id="12">Domination</gametype>
+		</mod>
+		<mod id="cpma">
+			<modname>CPMA</modname>
+			<modicon>cpma</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+			<gametype id="0">Free For All</gametype>
+			<gametype id="1">Tournament</gametype>
+			<gametype id="3">Team Death Match</gametype>
+			<gametype id="4">Capture The Flag</gametype>
+			<gametype id="5">Clan Arena</gametype>
+			<gametype id="6">Freeze Tag</gametype>
+			<gametype id="7">Capture Strike</gametype>
+		</mod>
+		<mod id="defrag">
+			<modname>DeFrag</modname>
+			<modicon>quake3</modicon>
+			<moddiscrim>gametype</moddiscrim>
+			<customnames>false</customnames>
+			<gametype id="0">Auto Config</gametype>
+			<gametype id="1">Single Player DeFrag</gametype>
+			<gametype id="2">Single Player Tricks</gametype>
+			<gametype id="3">Single Player Fastcaps</gametype>
+			<gametype id="4">Multiplayer Defrag</gametype>
+			<gametype id="5">Multiplayer Tricks</gametype>
+			<gametype id="6">Multiplayer Fastcaps</gametype>
+		</mod>
+	</game>
+	<game id="nexuiz">
+		<gamename>Nexuiz</gamename>
+		<gameicon>nexuiz</gameicon>
+		<servertype>q3s</servertype>
+		<attribute var="engineversion">gameversion</attribute>
+		<attribute var="gamename">modname</attribute>
+		<attribute var="protocol">protocol</attribute>
+		<attribute var="map">mapname</attribute>
+		<attribute var="servername">hostname</attribute>
+		<attribute var="maxclients">sv_maxclients</attribute>
+		<mod id="nexuiz">
+			<modname>Nexuiz</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+		</mod>
+		<mod id="data">
+			<modname>Data</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+		</mod>
+		<mod id="tourney">
+			<modname>Tourney</modname>
+			<moddiscrim>gametype</moddiscrim>
+			<team1name>Blue</team1name>
+			<team2name>Red</team2name>
+			<customnames>false</customnames>
+		</mod>
+	</game>
+</games>

@@ -1,0 +1,117 @@
+The All-Knowing Mind Change Log
+
+2009-06-29      Brian Rapp <dilireus@speakeasy.net>
+	+   Show splash screen (overridden by command line argument)
+	+   AKM Action on join (radio buttons): exit, minimize to tray, none
+	+	Check for updates on startup
+
+2009-06-28      Brian Rapp <dilireus@speakeasy.net>
+    +   Check for program updates, prompt user for download, open browser to 
+        project page.
+
+2009-06-27      Brian Rapp <dilireus@speakeasy.net>
+	+	Created About dialog.
+	+	Update GeoIP database.
+	+	Created User Preferences dialog.
+	+	Added defaultPort to Games.  It is stored in games.xml and loaded by
+		GamesLoader.  Used in Add Server dialog to provide the default value
+		for the server port.
+	+	Created function to add an arbitrary server by IP address/port to a folder.
+		This option appears on the folder pop up menu.
+	+	Added languages.xml and LanguageLoader class to load languages into an
+		array list.  This is used to select the language from the user preferences
+		dialog.  New languages can be added without any coding changes.
+
+2009-06-26      Brian Rapp <dilireus@speakeasy.net>
+	+	Arbitrary servers can now be added to servers with DND.
+
+2009-06-25      Brian Rapp <dilireus@speakeasy.net>
+    +   Coded folder functionality.  Users can add as many folders as they wish and
+        remove them again at will from the gameTree popup.  Servers are added to 
+        folders from the serverTable popup.  Servers can be removed from folders from 
+        the popup at will.
+        
+    +   If usergames.xml is not found, it will automatically be created.  If no games
+        are found installed in the default locations in gamedefaults.xml, then a setup
+        dialog will be opened automatically to allow the user to make changes.
+         
+    +   Revised XML configuration files.  "gamedefaults.xml" was added.  It contains all
+        default game settings and is used to build "usergames.xml".
+
+    +   Created GameSetupDialog class to allow user to modify game configuration from the
+        default values.  All settings are now configurable, including game engines and
+        master servers.
+        
+    +   Created GameDefaultsLoader class to load settings from gamedefaults.xml.
+    
+    +   Created UserGamesWriter class to save changes to game configurations to 
+        usergames.xml.
+    
+    +   Reconfigured main menu.
+    
+    +   Changed the gameTree and serverTable popup menus to be constructed dynamically
+        based on the type tree element selected.
+
+2009-02-02		Brian Rapp <dilireus@speakeasy.net>
+	+	Moved DTDs to separate files in preparation for code that updates XML files to
+		make the definition separate from the data.
+
+2009-01-29		Brian Rapp <dilireus@speakeasy.net>
+	+	Created new classes IgnoreItem and IgnoreList.  Changed Game.ignoreList from 
+		VarList to IgnoreList.  VarList requires unique	attributes, but multiple entries 
+		for the same attribute can exist for ignored items (e.g. - more than one mod can 
+		be ignored for a particular game, as is	the case for UrT within	Quake 3).
+
+2008-12-18		Brian Rapp <dilireus@speakeasy.net>
+	+	Fixed a bug that caused a crash (null mod reference) when trying to join a server
+		in a folder without first updating the folder. 
+
+v0.1.2
+2008-12-10		Brian Rapp <dilireus@speakeasy.net>
+	+	Added additional map images for UrT4.
+
+2008-12-09		Brian Rapp <dilireus@speakeasy.net>
+	+	Redirected stdout and stderr to the log file, if file logging is enabled.
+	+	Dynamically resize the canvas for the map image according to the image's aspect
+		ratio.  Always maintain a width of 200 pixels (though this is completely arbitrary).
+	+	Added ability to ignore servers based on specific attributes.  Currently only 
+		"mod" and "engine" are programmed, but it's trivial to add others by modifying
+		games.xml (to include other possible values in the DTD) and by adding the new
+		attribute to the isIgnored method in the Game class.
+	+	Moved log files to platform-specific user directories ("user.home"\Application Data\
+		All Knowing Mind\log\ on Windows and "user.home"/.akm/log/ on Linux).
+
+2008-12-07		Brian Rapp <dilireus@speakeasy.net>
+	+	Removed game discriminator code. It didn't work out as anticipated.
+	+	Added game execution by server engine. Moved the start command and working
+		directory into a new <start> element in usergames.xml. Multiple start commands 
+		can be listed for any game using the server engine reported by the server to
+		trigger which client to start. If an engine isn't specified, it defaults to the
+		value "default". 
+		
+2008-12-06		Brian Rapp <dilireus@speakeasy.net>
+	+	Fixed the disappearing unknowns bug.
+	+	Added ignore options to games.xml: <ignore> and <ignoreothers />. <ignore> will
+		allow the application to discard servers by mod name. For instance, 
+		<ignore>q3ut4</ignore> for a particular game will cause it to discard any servers 
+		with a game discriminator of q3ut4. <ignoreothers /> will cause the	app to ignore 
+		all discriminators not specifically identified.
+	+	Added game discriminator feature.  Default discriminator is mod.  Other option is
+		server engine, though others can be added as necessary.
+	+	Made UrT4 a standalone game.  It now uses the game engine as a discriminator to
+		segregate the ioUrbanTerror servers from the id Quake 3 servers.  This can be
+		changed in games.xml and usergames.xml if this behavior is not desired.		
+
+2008-12-05		Brian Rapp <dilireus@speakeasy.net>
+	+	Fixed bug with icons for servers in folders not getting updated during selected 
+		server query. Refresh all on a folder will change icon to unknown if it can't be
+		found, which is probably not a bad idea as the user will see that fact.
+
+
+v0.1.1	2008-11-28	Fixed minor bug causing Linux version to crash
+
+2008-11-28		Brian Rapp <dilireus@speakeasy.net>
+	+	Fixed Linux crash bug.
+
+
+v0.1.0	2008-11-26	Initial public release
