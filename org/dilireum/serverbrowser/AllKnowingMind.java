@@ -37,7 +37,7 @@ public class AllKnowingMind {
 	public AllKnowingMind			akm;
 	public static final String		AKMversion			= "0.2";
 	public static final String		XMLversion			= "0.2";
-	private static final int			MAP_IMAGE_WIDTH		= 200;
+	private static final int		MAP_IMAGE_WIDTH		= 200;
 	public static final String		NODE				= "NODE";
 	public static final String		FOLDER				= "FOLDER";
 	public static final String		SERVER_LIST_NODE	= "SERVERLIST";
@@ -71,10 +71,10 @@ public class AllKnowingMind {
 	private static final String		checkUpdates		= "akm.check_updates";
 	private static final String		onJoinAction		= "akm.join_action";
 	
-	public static String				language;
-	public static Locale				locale;
-	public static int					maxConcurrency;
-	public static int					maxRetries;
+	public static String			language;
+	public static Locale			locale;
+	public static int				maxConcurrency;
+	public static int				maxRetries;
 	public static final int			DEFAULT_MAX_CONCURRENCY	= 100;
 	public static final int			DEFAULT_MAX_RETRIES		= 3;
 	public static final int			MAX_CONCURRENCY			= 300;
@@ -90,15 +90,15 @@ public class AllKnowingMind {
     public static final int			REL_YEAR = 2009;
     public static final int			REL_MONTH = 6;
     public static final int			REL_DAY = 28;
-    public static String				latestVersion;
+    public static String			latestVersion;
     
     //private static final String		appImageFile		= imageDir + fileSep + "oracle128x128.gif";
 	
 	private static final String		appTitle			= "The All-Knowing Mind";
 	private static final String		defLogFileName 		= "AllKnowingMind.log";
 	private static final String		projectDownloadUrl	= "http://sourceforge.net/project/showfiles.php?group_id=243818&package_id=297179";
-	private static String				logFileName;
-	private static final int			defLogLevel			= 0;
+	private static String			logFileName;
+	private static final int		defLogLevel			= 0;
 	private static int				logLevel;
 
 	private static final boolean	SORT_ASCENDING		= false;
@@ -107,10 +107,10 @@ public class AllKnowingMind {
 	public static final String		hostOS				= System.getProperty("os.name").toLowerCase();
 	public static final String		hostArch			= System.getProperty("os.arch").toLowerCase();
 
-	private int			sortColumn		= -1;
-	private int			lastSortColumn	= -2;
-	//private long		lastMinimized   = 0;
-	private boolean		sortOrder		= SORT_DESCENDING; // init to desc so a click will sort ascending
+	private int				sortColumn		= -1;
+	private int				lastSortColumn	= -2;
+	//private long			lastMinimized   = 0;
+	private boolean			sortOrder		= SORT_DESCENDING; // init to desc so a click will sort ascending
 	private Collator 		collator;
 	//private Image			trayImage;
 	private ImageList		flagIcons;
@@ -136,7 +136,7 @@ public class AllKnowingMind {
 	
 	private Image			splashImage;
 	private Shell			splash;
-	private ProgressBar	splashBar;
+	private ProgressBar		splashBar;
 
 	private int				loop;
 
@@ -254,13 +254,13 @@ public class AllKnowingMind {
 	private Server			selectedServer;
 	private TableItem		previousServerItem;
 	
-	public static GameMap			games;
+	public static GameMap	games;
 	private String			supportedGamesFile;
 	private String			userGamesFile;
 	private String			gameDefaultsFile;
 	private String			languageFile;
 	private String			appIconFile;
-	//private String			trayImageFile;
+	//private String		trayImageFile;
 	private String			folderImageFile;
 	private String			serverIcon;
 	private String			pbIconFile;
@@ -271,15 +271,15 @@ public class AllKnowingMind {
 	private String			imageExt;
 	private String			oracleImageFile;
 	
-	private static Option noSplash;
-	private static Option help;
-	private static Option version;
-	private static Option logfile;
-	private static Option debug;
+	private static Option	noSplash;
+	private static Option	help;
+	private static Option	version;
+	private static Option	logfile;
+	private static Option	debug;
 	
-	public static boolean		enableSplash;
-	public static boolean		optEnableSplash;
-	public static enum JoinAction {
+	public static boolean	enableSplash;
+	public static boolean	optEnableSplash;
+	public static enum 		JoinAction {
 		None("none"), 
 		Minimize("minimize"), 
 		Exit("exit");
