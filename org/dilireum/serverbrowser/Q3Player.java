@@ -28,7 +28,7 @@ public class Q3Player extends Player {
 		readableName = parseRawName(playerName);
 		playerNumber = number;
 		this.score = score;
-		this .pingTime = pingTime;
+		this.pingTime = pingTime;
 		teamNumber = team;
 	}
 	
