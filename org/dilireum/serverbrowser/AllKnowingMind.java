@@ -3033,7 +3033,8 @@ public class AllKnowingMind {
 		}
 		serverTable.setRedraw(true);
 	}
-	
+
+	/*
 	private class JoinServerThread implements Runnable {
 		private String		connectString;
 		private String		workingDir;
@@ -3066,13 +3067,51 @@ public class AllKnowingMind {
 			}
 		}
 	}
+	*/
 
+	public void runCommandLine(String connectString, String workingDirectory) throws IOException {
+		String[] cmd = connectString.split("\\s+");
+	    ProcessBuilder processBuilder = new ProcessBuilder(cmd);
+	    processBuilder.directory(new File(workingDirectory));
+	    Process process = processBuilder.start();
+	    Thread commandLineThread = new Thread(() -> {
+	    	try {
+				InputStream stderr = process.getErrorStream();
+				InputStreamReader isr = new InputStreamReader(stderr);
+				BufferedReader br = new BufferedReader(isr);
+				//String line = null;
+				while ((br.readLine()) != null);
+					//System.out.println(line);
+				//int exitVal = proc.waitFor();
+				process.waitFor();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+	        } catch (InterruptedException ex) {
+	            ex.printStackTrace();
+	        }
+			/*
+	    	try {
+                BufferedReader br=new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String line;
+
+                while((line=br.readLine())!=null){
+                    System.out.println(line);
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            */
+        });
+        commandLineThread.setDaemon(true);
+        commandLineThread.start();
+	}
+
+	
 	public void joinServer(Server s) {
 		String				engineStart;
 		String				startParms;
 		String				workingDir;
 		String				connectString;
-		JoinServerThread	gameThread;
 		VarEntry			entry;
 
 		if (!s.game.isInstalled) {
@@ -3161,8 +3200,14 @@ public class AllKnowingMind {
 			shell.setMinimized(true);
 		}
 		SysLogger.logMsg(4, "Starting " + s.game.nodeName + " and connecting to " +	s.address.getHostAddress() + ":" + s.port);
-		gameThread = new JoinServerThread(connectString, workingDir);
-		gameThread.run();
+		try {
+			runCommandLine(connectString, workingDir);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//gameThread = new JoinServerThread(connectString, workingDir);
+		//gameThread.run();
 	}
 
 	private ServerList buildSelectedServerList(Table table) {
